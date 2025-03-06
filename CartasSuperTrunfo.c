@@ -76,6 +76,7 @@ int main(){
     printf("Pontos turísticos: %d \n", pontosTuristicos2);
     printf("Densidade populacional: %.2f hab/km²\n", densidadePopulacional2);
     printf("PIB per capita: R$ %.2f reais\n", pibPerCapita2);
+    printf("Finalizou\n");
 
     return 0;
 }
