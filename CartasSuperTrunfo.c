@@ -15,6 +15,14 @@ int main()
     float pibPerCapita1, pibPerCapita2;
     float superPoder1, superPoder2; // Novas variáveis para cálculo do nível avançado, super poder
 
+    // Cálculo da densidade populacional - nível aventureiro
+    densidadePopulacional1 = populacao1 / area1;
+    densidadePopulacional2 = populacao2 / area2;
+
+    // Cálculo do PIB per capita - nível aventureiro (convertendo PIB de bilhões para reais)
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+
     // Entrada de dados da primeira cidade-1
     printf(" \n Digite a letra do estado da primeira cidade\n");
     scanf(" %c", &estado1);
@@ -55,6 +63,14 @@ int main()
     pibPerCapita1 = (pib1 * 1000000000) / populacao1;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;
 
+    // Comparação utilizando if e else
+    if (area1 > area2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade1);
+    } else if (area2 > area1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidade2);
+    } else {
+        printf("Resultado: Empate! Ambas as cidades têm a mesma área.\n");
+    }
     // Cálculo do super poder - nível avançado
     superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + pibPerCapita1 + (1.0 / densidadePopulacional1);
     superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pibPerCapita2 + (1.0 / densidadePopulacional2);
@@ -104,3 +120,4 @@ int main()
 
     return 0;
 }
+
